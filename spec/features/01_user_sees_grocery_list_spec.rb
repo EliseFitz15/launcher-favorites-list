@@ -17,6 +17,7 @@ feature "user sees a list of favorite things" do
       file.puts([thing])
     end
     visit "/"
-    expect(page).to have_content("Psyduck")
+
+    expect(page).to_not have_content("Psyduck")
   end
 end
